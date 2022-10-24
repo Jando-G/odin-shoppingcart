@@ -21,7 +21,7 @@ function NavBar() {
             <Link to="earn">Earn</Link>
          </li>
          <li>
-            Spend
+            <Link to="cart">cart</Link>
          </li>
      </ul>
     </nav>
