@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+#Logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
+ul {
+    display: flex;
+    list-style: none;
+}
+li {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
