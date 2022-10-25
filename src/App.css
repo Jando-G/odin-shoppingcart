@@ -10,6 +10,7 @@ body {
     grid-template-rows: 5rem 1fr 3.5rem;
     background-color: #D2DAFF;
     color: rgb(39, 33, 34);
+    font-size: 1.2rem;
 }
 #Logo {
     flex: 1;
@@ -17,11 +18,21 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    font-family: Helvetica, Arial, sans-serif; 
+    font-weight: bold; 
+    font-style : italic;
+    color: #fff; 
+    text-decoration: none;
+    margin : auto;
+}
+#Logo > div {
+    background: red; 
+    padding: 7px 7px; 
 }
 nav {
     display: flex;
     justify-content: space-between;
-    margin: 4rem 8rem 4rem 8rem;
+    margin: 2rem 5rem 4rem 5rem;
 }
 ul {
     flex: 1;
@@ -41,6 +52,9 @@ a {
     color: inherit;
     text-decoration: inherit;
 }
+li > a:hover {
+    border-bottom: 1px solid rgb(39, 33, 34);
+}
 footer {
     background-color: rgb(80, 80, 80);
     color: #e8d8d8;
@@ -55,4 +69,21 @@ Footer a {
     font-size: 1.25rem;
     text-decoration: none;
     gap: 0 .8rem;
+  }
+  .Shop {
+    margin: 2rem 0 0 0;
+  }
+  .ShopTile {
+    height: 20rem;
+    max-width: 100vw;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h1 {
+    color: white;
   }
