@@ -1,19 +1,37 @@
 * {
     box-sizing: border-box;
 }
+body {
+    margin: 0;
+}
+.App {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 5rem 1fr 3.5rem;
+    background-color: #D2DAFF;
+    color: rgb(39, 33, 34);
+}
 #Logo {
+    flex: 1;
     display: flex;
+    justify-content: center;
     align-items: center;
     font-size: 2rem;
 }
 nav {
     display: flex;
     justify-content: space-between;
-    margin: 2rem;
+    margin: 4rem 8rem 4rem 8rem;
 }
 ul {
+    flex: 1;
     display: flex;
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.ul2 {
+    justify-content: flex-end;
 }
 li {
     margin-left: 2rem;
@@ -23,3 +41,18 @@ a {
     color: inherit;
     text-decoration: inherit;
 }
+footer {
+    background-color: rgb(80, 80, 80);
+    color: #e8d8d8;
+  }
+Footer a {
+    background-color: #1c1917;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.25rem;
+    text-decoration: none;
+    gap: 0 .8rem;
+  }

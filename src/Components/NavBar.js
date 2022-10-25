@@ -2,18 +2,12 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <nav>
-     <ul>
-         <li>
-             <Link to="/">Home</Link>
-         </li>
-         <li>
-            <Link to="about">About</Link>
-         </li>
-    </ul>
+        {/* Empty ul for keeping logo centered */}
+        <ul></ul>
         <div id="Logo">
-            Joke Store
+          <Link to="">Joke Store</Link>
         </div>
-    <ul>
+    <ul className="ul2">
          <li>
             <Link to="shop">Shop</Link>
          </li>
