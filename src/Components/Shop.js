@@ -6,21 +6,22 @@ import christmas from '../Assets/roberto-nickson-5PQn41LFsQk-unsplash.jpg';
 import pun from '../Assets/girl-with-red-hat-cpkB8SumMy4-unsplash.jpg';
 import misc from '../Assets/mike-dorner-sf_1ZDA1YFw-unsplash.jpg';
 
+
 function Shop() {
     return (
       <div className="Shop">
           <ShopTile source={programming}
-          title="Programming Humor"/>
+          title="Programming"/>
           <ShopTile source={dark}
-          title="Dark Humor"/>
+          title="Dark"/>
           <ShopTile source={spooky}
-          title="Spooky Jokes"/>
+          title="Spooky"/>
           <ShopTile source={christmas}
-          title="Christmas Jokes"/>
+          title="Christmas"/>
           <ShopTile source={pun}
-          title="Puns"/>
+          title="Pun"/>
           <ShopTile source={misc}
-          title="Miscellaneous"/>
+          title="Misc"/>
       </div>
     );
   }
