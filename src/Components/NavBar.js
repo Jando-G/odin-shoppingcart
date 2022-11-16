@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import bag from '../Assets/cart-outline.png';
 function NavBar(props) {
-  console.log(props)
+  
   return (
     <nav>
         {/* Empty ul for keeping logo centered. kinda scuffed*/}
@@ -13,7 +13,7 @@ function NavBar(props) {
         </div>
     <ul className="ul2">
          <li>
-            <Link to="shop">Shop</Link>
+            <Link to="jokes">Jokes</Link>
          </li>
          <li>
             <Link to="earn">Earn</Link>
@@ -21,7 +21,7 @@ function NavBar(props) {
          <li>
             <Link to="cart" className='Cart'>
               <img src={bag} alt="cart" />
-              <div>{props.count}</div>
+              <div data-testid="cart-count">{props.count ? props.count : 0}</div>
             </Link>
          </li>
      </ul>

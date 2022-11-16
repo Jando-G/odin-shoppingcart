@@ -1,17 +1,20 @@
-import { useParams } from "react-router-dom";
 import { useState, setState } from 'react';
 import { Link } from "react-router-dom";
 function ItemPage(props) {
   const [amount, setAmount] = useState(1);
-    let params = useParams();
+    const addItem = () => {
+      const type = document.getElementById('type');
+      const order = props.category + type.value;
+      let newItem = {};
+      newItem[order] = amount;
+      props.updateCart(newItem);
+    }
     const incrementCount = () => {
       if(isNaN(amount)) {
         setAmount(1);
-        console.log('set to 1')
       }
       else {
         setAmount(count => parseInt(count) + 1);
-        console.log('add 1')
       }
     }
     const decrementCount = () => {
@@ -23,8 +26,9 @@ function ItemPage(props) {
       }
     }
     const handleChange = e => {
-      if((e.target.value > 0 && !isNaN(e.target.value)) || e.target.value === '') {
-        setAmount(e.target.value);
+      const result = e.target.value.replace(/[^0-9]/gi, '');
+      if(result > 0) {
+        setAmount(parseInt(result));
       }
       else {
         setAmount(1);
@@ -34,14 +38,10 @@ function ItemPage(props) {
       <div className="ItemPage">
           <h2>{props.title}</h2>
           <p>${props.price * amount}</p>
-          <label htmlFor="agreement">ALL SALES ARE FINAL</label>
-          <select id="agreement" name="agreement">
-            <option>I aknowledge and accept this condition</option>
-          </select>
           <label htmlFor="type">Joke Type</label>
           <select id="type" name="type">
-            <option>One-liner</option>
-            <option>Two-parter</option>
+            <option value="0">One-liner</option>
+            <option value="1">Two-parter</option>
           </select>
           <div className="CountContainer">
             <div>Quantity</div>
@@ -51,7 +51,7 @@ function ItemPage(props) {
               <div className="AddBtn" onClick={incrementCount}>+</div>
             </div>
           </div>
-          <Link to="/cart">
+          <Link onClick={addItem} to="/cart">
             <div className="BuyBtn">Add to Cart</div>
           </Link>
       </div>
