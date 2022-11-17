@@ -19,7 +19,7 @@ function NavBar(props) {
             <Link to="earn">Earn</Link>
          </li>
          <li>
-            <Link to="cart" className='Cart'>
+            <Link to="cart" className='CartLink'>
               <img src={bag} alt="cart" />
               <div data-testid="cart-count">{props.count ? props.count : 0}</div>
             </Link>

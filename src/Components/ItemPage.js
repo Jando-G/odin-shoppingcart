@@ -37,7 +37,7 @@ function ItemPage(props) {
     return (
       <div className="ItemPage">
           <h2>{props.title}</h2>
-          <p>${props.price * amount}</p>
+          <p>${10 * amount}</p>
           <label htmlFor="type">Joke Type</label>
           <select id="type" name="type">
             <option value="0">One-liner</option>

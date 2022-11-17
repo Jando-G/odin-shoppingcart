@@ -14,7 +14,6 @@ function App() {
   const updateCart = (items) => {
     const newCart = cart.concat(items);
     setCart(newCart);
-    console.log(newCart);
   }
   const countCart = () => {
     let total = 0;
@@ -33,42 +32,44 @@ function App() {
             <Route path="*" element={<Home />} />
             <Route index element={<Home />} />
             <Route path = "earn" element={<Earn />} />
-            <Route path = "cart" element={<Cart />} />
+            <Route path = "cart" element={<Cart 
+            updateCart={updateCart} 
+            cart={cart}/>} />
             <Route path = "jokes" element={<Shop />} />
 
             {/* Item pages Start here */}
             <Route path="jokes/Programming"
-            element={<ItemPage price="404"
+            element={<ItemPage
             category="Programming"
             title="Programming Humor"
             updateCart={updateCart}/>}/>
             <Route path="jokes/Dark"
-            element={<ItemPage price="500" 
+            element={<ItemPage
             category="Dark"
             title="Dark Humor"
             updateCart={updateCart}/>}/>
             <Route path="jokes/Spooky"
-            element={<ItemPage price="666" 
+            element={<ItemPage
             category="Spooky"
             title="Spooky Jokes"
             updateCart={updateCart}/>}/>
             <Route path="jokes/Christmas"
-            element={<ItemPage price="150"
+            element={<ItemPage
             category="Christmas"
             title="Christmas Jokes"
             updateCart={updateCart}/>}/>
             <Route path="jokes/Pun"
-            element={<ItemPage price="10"
+            element={<ItemPage
             category="Puns"
             title="Puns"
             updateCart={updateCart}/>}/>
             <Route path="jokes/Misc"
-            element={<ItemPage price="80"
+            element={<ItemPage
             category="Misc"
             title="Miscellaneous"
             updateCart={updateCart}/>}/>
             <Route path="jokes/Any"
-            element={<ItemPage price="100"
+            element={<ItemPage
             category="Any"
             title="Random Joke (All Categories)"
             updateCart={updateCart}/>}/>
