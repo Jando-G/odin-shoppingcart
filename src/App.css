@@ -192,8 +192,9 @@ input[type=number] {
 }
 .Cart > div {
   display: flex;
-  width: 40rem;
-  justify-content: space-between
+  width: 50rem;
+  justify-content: space-between;
+  padding: 1rem 0 1rem 0;
 }
 .Cart > div:first-child {
   border-bottom: 2px solid var(--dark-bg-color);
@@ -202,4 +203,10 @@ input[type=number] {
 .Cart > div:last-child {
   border-top: 2px solid var(--dark-bg-color);
   padding-top: 1rem;
+}
+.Cart > div > div:first-child {
+  width: 16rem;
+}
+.Cart > div > div:last-child {
+
 }

@@ -6,26 +6,37 @@ import NavBar from './Components/NavBar';
 import Shop from './Components/Shop';
 import Footer from './Components/Footer';
 import ItemPage from './Components/ItemPage';
-import { useState, setState, createContext } from 'react';
+import { useState } from 'react';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   const [cart, setCart] = useState([]);
+  const [count, setCount] = useState(0); //only exists so nav updates on setCart
+
   const updateCart = (items) => {
-    const newCart = cart.concat(items);
+    let newCart = cart;
+    if(!newCart[Object.keys(items)[0]]) {
+      newCart[Object.keys(items)[0]] = items[Object.keys(items)[0]];
+    }
+    else {
+      newCart[Object.keys(items)[0]] += items[Object.keys(items)[0]];
+    }
     setCart(newCart);
+    setCount(countCart(newCart));
   }
-  const countCart = () => {
+
+  const countCart = (list) => {
     let total = 0;
-    cart.forEach((item) => {
-      total+= item[Object.keys(item)[0]];
-    })
+    for (const item in list) {
+      total += list[item];
+    }
     return total;
   }
+
   return (
     <Router>
       <div className="App">
-        <NavBar count={countCart()} />
+        <NavBar count={count} />
         <div className="Content">
           <Routes>
             <Route path = "/" element={<Home />} />

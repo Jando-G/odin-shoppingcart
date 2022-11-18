@@ -9,7 +9,7 @@ describe('Test Home Page', () => {
 describe('Test Store Page', () => {
   it('expect store page to be rendered', () => {
     render(<App />);
-    const button = screen.getByText('Jokes');
+    const button = screen.getByText("Jokes");
     fireEvent.click(button);
     const linkElement = screen.getByText(/Programming/i);
     expect(linkElement).toBeInTheDocument();
@@ -18,7 +18,7 @@ describe('Test Store Page', () => {
 describe('Test Product Page', () => {
   it('expect product page to be rendered', () => {
     render(<App />);
-    const button = screen.getByText('Jokes');
+    const button = screen.getByText("Jokes");
     fireEvent.click(button);
     const pageBtn = screen.getByText('Programming');
     fireEvent.click(pageBtn);
@@ -27,7 +27,7 @@ describe('Test Product Page', () => {
   });
   it('Adding items changes cart count', () => {
     render(<App />);
-    const button = screen.getByText('Jokes');
+    const button = screen.getByText("Jokes");
     fireEvent.click(button);
     const pageBtn = screen.getByText('Programming');
     fireEvent.click(pageBtn);
@@ -40,7 +40,7 @@ describe('Test Product Page', () => {
   });
   it('Adding more items increments cart count', () => {
     render(<App />);
-    const button = screen.getByText('Jokes');
+    const button = screen.getByText("Jokes");
     fireEvent.click(button);
     const pageBtn = screen.getByText('Programming');
     fireEvent.click(pageBtn);
@@ -61,7 +61,38 @@ describe('Test Product Page', () => {
 })
 
 describe('Test Cart Page', () => {
-  
+  it('expect correct item to be rendered in cart', () => {
+    render(<App />);
+    const button = screen.getByText("Jokes");
+    fireEvent.click(button);
+    const pageBtn = screen.getByText('Programming');
+    fireEvent.click(pageBtn);
+    const input = screen.getByDisplayValue(1);
+    fireEvent.change(input, {target: {value: 5}});
+    const submitBtn = screen.getByText("Add to Cart");
+    fireEvent.click(submitBtn);
+    const title = screen.getByText("Programming (One-Liner)");
+    expect(title).toBeInTheDocument();
+  });
+  it('Adding same item twice increments cart count', () => {
+    render(<App />);
+    const button = screen.getByText("Jokes");
+    fireEvent.click(button);
+    const pageBtn = screen.getByText('Programming');
+    fireEvent.click(pageBtn);
+    const input = screen.getByDisplayValue(1);
+    fireEvent.change(input, {target: {value: 5}});
+    const submitBtn = screen.getByText("Add to Cart");
+    fireEvent.click(submitBtn);
+    fireEvent.click(button);
+    const pageBtn2 = screen.getByText('Programming');
+    fireEvent.click(pageBtn2);
+    const input2 = screen.getByDisplayValue(1);
+    fireEvent.change(input2, {target: {value: 6}});
+    const submitBtn2 = screen.getByText("Add to Cart");
+    fireEvent.click(submitBtn2);
+    expect(screen.getByDisplayValue("11")).toBeInTheDocument();
+  });
 })
 
 describe('Test Earn Page', () => {

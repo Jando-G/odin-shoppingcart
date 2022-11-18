@@ -1,24 +1,36 @@
 function Cart(props) {
-  console.log(props.cart)
+  
+  const parseStr = (str) => {
+    let strCpy = str.toString();
+    const type = strCpy.charAt(strCpy.length - 1);
+    strCpy = strCpy.slice(0, -1);
+    if(type === '0') {
+      strCpy = strCpy + ' (One-Liner)';
+    }
+    else {
+      strCpy = strCpy + ' (Two-Parter)';
+    }
+    return strCpy;
+  }
     return (
       <div className="CartContainer">
         <div className="Cart">
         <div>
             <div>Shopping Cart</div>
             <div>Quanitity</div>
-            <div>Total</div>
+            <div>Cost</div>
           </div>
-            {props.cart.map((item, i) => 
+            {Object.keys(props.cart).map((item, i) => 
             <div key={i}>
-              <div>{[Object.keys(item)[0]]}</div>
-              <div>{item[Object.keys(item)[0]]}</div>
-              <div>${item[Object.keys(item)[0]] * 10}</div>
+              <div>{parseStr(item)}</div>
+              <div>{props.cart[item]}</div>
+              <div>${props.cart[item] * 10}</div>
             </div>)}
           <div>
             <div></div>
             <div></div>
             <div className="CartFoot">
-              <div>Cost</div>
+              <div>Total: ${}</div>
               <div>Check Out</div>
             </div>
           </div>
