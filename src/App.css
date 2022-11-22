@@ -160,6 +160,10 @@ label {
   align-items: center;
   align-content: center;
 }
+.Counter-small {
+  user-select: none;
+  display: flex;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -208,5 +212,5 @@ input[type=number] {
   width: 16rem;
 }
 .Cart > div > div:last-child {
-
+  width: 3rem
 }

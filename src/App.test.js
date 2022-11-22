@@ -61,6 +61,8 @@ describe('Test Product Page', () => {
 })
 
 describe('Test Cart Page', () => {
+  /*the input controls are nearly identical to the
+  store page input so I'm not gunna bother testing it*/
   it('expect correct item to be rendered in cart', () => {
     render(<App />);
     const button = screen.getByText("Jokes");
@@ -91,7 +93,7 @@ describe('Test Cart Page', () => {
     fireEvent.change(input2, {target: {value: 6}});
     const submitBtn2 = screen.getByText("Add to Cart");
     fireEvent.click(submitBtn2);
-    expect(screen.getByDisplayValue("11")).toBeInTheDocument();
+    expect(screen.getByDisplayValue(11)).toBeInTheDocument();
   });
 })
 

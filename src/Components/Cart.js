@@ -1,5 +1,36 @@
 function Cart(props) {
-  
+  const handleChange = (e, itemName) => {
+    const result = e.target.value.replace(/[^0-9]/gi, '')
+    let itemCpy = {};
+    let shift;
+    if(parseInt(result) > 0) {
+      shift = result - props.cart[itemName];
+      itemCpy[itemName] = parseInt(shift);
+    }
+    else {
+      shift = 1 - props.cart[itemName];
+      itemCpy[itemName] = shift;
+    }
+    console.log(itemCpy);
+    props.updateCart(itemCpy);
+  }
+  const incrementCount = (e, itemName) => {
+    let itemCpy = {}
+    itemCpy[itemName] = 1;
+    props.updateCart(itemCpy);
+  }
+  const decrementCount = (e, itemName) => {
+    let itemCpy = {}
+    console.log(props.cart[itemName])
+    if(props.cart[itemName] > 1) {
+      itemCpy[itemName] = -1;
+    }
+    else {
+      itemCpy[itemName] = 0;
+    }
+    console.log(itemCpy)
+    props.updateCart(itemCpy);
+  }
   const parseStr = (str) => {
     let strCpy = str.toString();
     const type = strCpy.charAt(strCpy.length - 1);
@@ -23,7 +54,11 @@ function Cart(props) {
             {Object.keys(props.cart).map((item, i) => 
             <div key={i}>
               <div>{parseStr(item)}</div>
-              <div>{props.cart[item]}</div>
+              <div className="Counter-small" name="counter">
+                <div className="SubBtn" onClick={e => decrementCount(e, item)}>-</div>
+                <input value={props.cart[item]} onChange={e => handleChange(e, item)} className="Count" type="number" name="Count" min="1"/>
+                <div className="AddBtn" onClick={e => incrementCount(e, item)}>+</div>
+              </div>
               <div>${props.cart[item] * 10}</div>
             </div>)}
           <div>

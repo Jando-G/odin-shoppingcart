@@ -12,7 +12,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   const [cart, setCart] = useState([]);
   const [count, setCount] = useState(0); //only exists so nav updates on setCart
-
+//will remove count state if it somehow gets fixed
   const updateCart = (items) => {
     let newCart = cart;
     if(!newCart[Object.keys(items)[0]]) {
@@ -36,7 +36,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar count={count} />
+        <NavBar count={countCart(cart)} />
         <div className="Content">
           <Routes>
             <Route path = "/" element={<Home />} />

@@ -8,3 +8,7 @@ https://unsplash.com/photos/sf_1ZDA1YFw
 
 IDEAS
 add a mystery section for 'Any' joke
+
+KNOWN BUGS  
+Adding a huge value for item and then typing 0 will change it to zero HOW
+the above bug isn't bad tho. might not fix it
