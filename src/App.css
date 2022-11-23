@@ -209,8 +209,36 @@ input[type=number] {
   padding-top: 1rem;
 }
 .Cart > div > div:first-child {
-  width: 16rem;
+  width: 14rem;
 }
 .Cart > div > div:last-child {
-  width: 3rem
+  justify-self: end;
+}
+.CheckOut {
+  background-color: var(--main-bg-color);
+  border: 3px solid var(--dark-bg-color);
+  color: var(--dark-bg-color);
+  height: 3rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  user-select: none;
+}
+.CheckOut:hover {
+  color: var(--main-bg-color);
+  background-color: var(--dark-bg-color);
+}
+.CheckOut:active {
+  scale: 1.1;
+}
+.Remove {
+  font-size: .9rem;
+  user-select: none;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+.Remove:hover {
+  color: var(--dark-bg-color);
 }

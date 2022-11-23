@@ -24,7 +24,12 @@ function App() {
     setCart(newCart);
     setCount(countCart(newCart));
   }
-
+  const deleteItem = item => {
+    let newCart = cart;
+    delete newCart[item];
+    setCart(newCart);
+    setCount(countCart(newCart))
+  }
   const countCart = (list) => {
     let total = 0;
     for (const item in list) {
@@ -45,6 +50,7 @@ function App() {
             <Route path = "earn" element={<Earn />} />
             <Route path = "cart" element={<Cart 
             updateCart={updateCart} 
+            deleteItem={deleteItem}
             cart={cart}/>} />
             <Route path = "jokes" element={<Shop />} />
 
