@@ -95,6 +95,19 @@ describe('Test Cart Page', () => {
     fireEvent.click(submitBtn2);
     expect(screen.getByDisplayValue(11)).toBeInTheDocument();
   });
+  it('Removing an item actually removes it', () => {
+    render(<App />);
+    const button = screen.getByText("Jokes");
+    fireEvent.click(button);
+    const pageBtn = screen.getByText('Programming');
+    fireEvent.click(pageBtn);
+    const submitBtn = screen.getByText("Add to Cart");
+    fireEvent.click(submitBtn);
+    const removeBtn = screen.getByText("remove");
+    const item = screen.getByText("Programming (One-Liner)");
+    fireEvent.click(removeBtn);
+    expect(item).not.toBeInTheDocument();
+  });
 })
 
 describe('Test Earn Page', () => {
