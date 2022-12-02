@@ -11,8 +11,16 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   const [cart, setCart] = useState([]);
+  const [cooks, setCooks] = useState(0);
   const [count, setCount] = useState(0); //only exists so nav updates on setCart
 //will remove count state if it somehow gets fixed
+  const incrementCooks = () => {
+    setCooks(c => c + 1);
+    console.log(cooks)
+  }
+  const spendCooks = () => {
+    
+  }
   const updateCart = (items) => {
     let newCart = cart;
     if(!newCart[Object.keys(items)[0]]) {
@@ -41,13 +49,14 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar count={countCart(cart)} />
+        <NavBar count={countCart(cart)} cookies={cooks}/>
         <div className="Content">
           <Routes>
             <Route path = "/" element={<Home />} />
             <Route path="*" element={<Home />} />
             <Route index element={<Home />} />
-            <Route path = "earn" element={<Earn />} />
+            <Route path = "earn" element={<Earn
+            incrementCooks={incrementCooks} />} />
             <Route path = "cart" element={<Cart 
             updateCart={updateCart} 
             deleteItem={deleteItem}
