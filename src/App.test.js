@@ -32,7 +32,7 @@ describe('Test Product Page', () => {
     const pageBtn = screen.getByText('Programming');
     fireEvent.click(pageBtn);
     const input = screen.getByDisplayValue(1);
-    fireEvent.change(input, {target: {value: 5}});
+    fireEvent.change(input, { target: { value: 5 } });
     const submitBtn = screen.getByText("Add to Cart");
     fireEvent.click(submitBtn);
     const cartCount = screen.getByTestId('cart-count');
@@ -45,14 +45,14 @@ describe('Test Product Page', () => {
     const pageBtn = screen.getByText('Programming');
     fireEvent.click(pageBtn);
     let input = screen.getByDisplayValue(1);
-    fireEvent.change(input, {target: {value: 5}});
+    fireEvent.change(input, { target: { value: 5 } });
     let submitBtn = screen.getByText("Add to Cart");
     fireEvent.click(submitBtn);
     fireEvent.click(button);
     const dark = screen.getByText("Dark");
     fireEvent.click(dark);
     input = screen.getByDisplayValue(1)
-    fireEvent.change(input, {target: {value: 6}});
+    fireEvent.change(input, { target: { value: 6 } });
     submitBtn = screen.getByText("Add to Cart");
     fireEvent.click(submitBtn);
     const cartCount = screen.getByTestId('cart-count');
@@ -70,7 +70,7 @@ describe('Test Cart Page', () => {
     const pageBtn = screen.getByText('Programming');
     fireEvent.click(pageBtn);
     const input = screen.getByDisplayValue(1);
-    fireEvent.change(input, {target: {value: 5}});
+    fireEvent.change(input, { target: { value: 5 } });
     const submitBtn = screen.getByText("Add to Cart");
     fireEvent.click(submitBtn);
     const title = screen.getByText("Programming (One-Liner)");
@@ -83,14 +83,14 @@ describe('Test Cart Page', () => {
     const pageBtn = screen.getByText('Programming');
     fireEvent.click(pageBtn);
     const input = screen.getByDisplayValue(1);
-    fireEvent.change(input, {target: {value: 5}});
+    fireEvent.change(input, { target: { value: 5 } });
     const submitBtn = screen.getByText("Add to Cart");
     fireEvent.click(submitBtn);
     fireEvent.click(button);
     const pageBtn2 = screen.getByText('Programming');
     fireEvent.click(pageBtn2);
     const input2 = screen.getByDisplayValue(1);
-    fireEvent.change(input2, {target: {value: 6}});
+    fireEvent.change(input2, { target: { value: 6 } });
     const submitBtn2 = screen.getByText("Add to Cart");
     fireEvent.click(submitBtn2);
     expect(screen.getByDisplayValue(11)).toBeInTheDocument();
