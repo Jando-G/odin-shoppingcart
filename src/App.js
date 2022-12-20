@@ -51,7 +51,7 @@ function App() {
     setCart([]);
   }
   return (
-    <Router>
+    <Router basename='/app'>
       <div className="App">
         <NavBar count={countCart(cart)} cookies={cooks}/>
         <div className="Content">
