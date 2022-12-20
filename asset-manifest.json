@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/https//http://jandotopia.com/odin-shoppingcart/static/css/main.cfee0bb3.css",
-    "main.js": "/https//http://jandotopia.com/odin-shoppingcart/static/js/main.b29f094c.js",
+    "main.js": "/https//http://jandotopia.com/odin-shoppingcart/static/js/main.373fd134.js",
     "static/media/girl-with-red-hat-cpkB8SumMy4-unsplash.jpg": "/https//http://jandotopia.com/odin-shoppingcart/static/media/girl-with-red-hat-cpkB8SumMy4-unsplash.07579e00830e9c3e315c.jpg",
     "static/media/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg": "/https//http://jandotopia.com/odin-shoppingcart/static/media/fotis-fotopoulos-DuHKoV44prg-unsplash.41f61d005e89434247f0.jpg",
     "static/media/sergiu-baica-5hCneY6YeFQ-unsplash.jpg": "/https//http://jandotopia.com/odin-shoppingcart/static/media/sergiu-baica-5hCneY6YeFQ-unsplash.2246d6f1542a52373b51.jpg",
@@ -13,10 +13,10 @@
     "static/media/photo-1572860177022-8fda92a90c95.avif": "/https//http://jandotopia.com/odin-shoppingcart/static/media/photo-1572860177022-8fda92a90c95.b6dfcbedf1b9da1dcf01.avif",
     "index.html": "/https//http://jandotopia.com/odin-shoppingcart/index.html",
     "main.cfee0bb3.css.map": "/https//http://jandotopia.com/odin-shoppingcart/static/css/main.cfee0bb3.css.map",
-    "main.b29f094c.js.map": "/https//http://jandotopia.com/odin-shoppingcart/static/js/main.b29f094c.js.map"
+    "main.373fd134.js.map": "/https//http://jandotopia.com/odin-shoppingcart/static/js/main.373fd134.js.map"
   },
   "entrypoints": [
     "static/css/main.cfee0bb3.css",
-    "static/js/main.b29f094c.js"
+    "static/js/main.373fd134.js"
   ]
 }
