@@ -1,4 +1,4 @@
-import { useState, setState } from 'react';
+import { useState } from 'react';
 import { Link } from "react-router-dom";
 function ItemPage(props) {
   const [amount, setAmount] = useState(1);

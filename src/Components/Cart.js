@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Cart(props) {
   const handleChange = (e, itemName) => {
     const result = e.target.value.replace(/[^0-9]/gi, '')
@@ -28,10 +30,15 @@ function Cart(props) {
     }
     props.updateCart(itemCpy);
   }
-  const countTotal = (list) => {
+  const countTotal = () => {
     let total = 0;
-    for (const item in list) {
-      total += list[item];
+    for (const item in props.cart) {
+      if(item.charAt(item.length - 1) === '1') {
+        total+= 10 * props.cart[item];
+      }
+      else {
+        total+=5 * props.cart[item];
+      }
     }
     return total;
   }
@@ -66,14 +73,20 @@ function Cart(props) {
               <input value={props.cart[item]} onChange={e => handleChange(e, item)} className="Count" type="number" name="Count" min="1"/>
               <div className="AddBtn" onClick={() => incrementCount(item)}>+</div>
             </div>
-            <div>${props.cart[item] * 10}</div>
+            <div>${countTotal()}</div>
           </div>)}
           <div>
             <div></div>
             <div></div>
             <div className="CartFoot">
-              <div>Total: ${countTotal(props.cart) * 10}</div>
-              <div className="CheckOut">Check Out</div>
+              <div style={{marginBottom: '.5rem'}}>Total: ${countTotal()}</div>
+              {props.cooks >= countTotal() ? 
+              <Link to="/thanks" onClick={()=> props.spendCooks(countTotal())} className="CheckOut" >Check Out</Link> : 
+              <div>
+                <div className="CheckOut Grey-out">Check Out</div>
+                <div style={{width: '10rem', textAlign: 'center', marginTop: '1rem'}}>You can't afford these jokes. Click more cookies!</div>
+              </div>
+              }
             </div>
           </div>
         </div>

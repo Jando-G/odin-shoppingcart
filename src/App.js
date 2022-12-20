@@ -6,6 +6,7 @@ import NavBar from './Components/NavBar';
 import Shop from './Components/Shop';
 import Footer from './Components/Footer';
 import ItemPage from './Components/ItemPage';
+import Thanks from './Components/Thanks';
 import { useState } from 'react';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -16,10 +17,11 @@ function App() {
 //will remove count state if it somehow gets fixed
   const incrementCooks = () => {
     setCooks(c => c + 1);
-    console.log(cooks)
   }
-  const spendCooks = () => {
-    
+  const spendCooks = (cost) => {
+    let newTotal = cooks;
+    newTotal -= cost;
+    setCooks(newTotal);
   }
   const updateCart = (items) => {
     let newCart = cart;
@@ -45,7 +47,9 @@ function App() {
     }
     return total;
   }
-
+  const clearCart = () => {
+    setCart([]);
+  }
   return (
     <Router>
       <div className="App">
@@ -60,7 +64,10 @@ function App() {
             <Route path = "cart" element={<Cart 
             updateCart={updateCart} 
             deleteItem={deleteItem}
+            spendCooks={spendCooks}
+            cooks={cooks}
             cart={cart}/>} />
+            <Route path = "thanks" element={<Thanks clearCart={clearCart} cart={cart}/>} />
             <Route path = "jokes" element={<Shop />} />
 
             {/* Item pages Start here */}

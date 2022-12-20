@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 :root {
   --main-bg-color: #FADCD9;
   --light-bg-color: #F9F1F0;
@@ -11,6 +12,7 @@
 }
 body {
     margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
 }
 .App {
     height: 100vh;
@@ -61,6 +63,7 @@ ul {
 li {
     margin-left: 2rem;
     margin-right: 2rem;
+    list-style: none;
 }
 a {
     color: inherit;
@@ -167,10 +170,12 @@ label {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 input[type=number] {
   -moz-appearance: textfield;
+  appearance: none;
 }
 .Count {
   background-color: var(--main-bg-color);
@@ -259,4 +264,27 @@ input[type=number] {
   height: 50%;
   width: 40%;
   scale: 1.5;
+}
+.Grey-out {
+  background-color: grey;
+  color: black;
+}
+#email {
+  margin: 0;
+}
+.Thanks {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--main-bg-color);
+}
+.Home {
+  display: flex;
+  width: 50%;
+  margin: 10rem auto 0 auto;
+  text-indent: 50px;
+  font-size: 2rem; 
+  line-height: 4rem;
 }
