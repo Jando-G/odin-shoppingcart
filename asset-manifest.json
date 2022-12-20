@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cfee0bb3.css",
+    "main.js": "/static/js/main.af1a79a2.js",
+    "static/media/girl-with-red-hat-cpkB8SumMy4-unsplash.jpg": "/static/media/girl-with-red-hat-cpkB8SumMy4-unsplash.07579e00830e9c3e315c.jpg",
+    "static/media/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg": "/static/media/fotis-fotopoulos-DuHKoV44prg-unsplash.41f61d005e89434247f0.jpg",
+    "static/media/sergiu-baica-5hCneY6YeFQ-unsplash.jpg": "/static/media/sergiu-baica-5hCneY6YeFQ-unsplash.2246d6f1542a52373b51.jpg",
+    "static/media/roberto-nickson-5PQn41LFsQk-unsplash.jpg": "/static/media/roberto-nickson-5PQn41LFsQk-unsplash.5955e3731fd0538bb5ec.jpg",
+    "static/media/cookieLogo.png": "/static/media/cookieLogo.9c0ad1447bca0837baa5.png",
+    "static/media/cookie.png": "/static/media/cookie.6b322d96512fc393225e.png",
+    "static/media/mike-dorner-sf_1ZDA1YFw-unsplash.jpg": "/static/media/mike-dorner-sf_1ZDA1YFw-unsplash.1644b938a11655c62e2d.jpg",
+    "static/media/orange.png": "/static/media/orange.cb11f206fb40c6e9135a.png",
+    "static/media/photo-1572860177022-8fda92a90c95.avif": "/static/media/photo-1572860177022-8fda92a90c95.b6dfcbedf1b9da1dcf01.avif",
+    "index.html": "/index.html",
+    "main.cfee0bb3.css.map": "/static/css/main.cfee0bb3.css.map",
+    "main.af1a79a2.js.map": "/static/js/main.af1a79a2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cfee0bb3.css",
+    "static/js/main.af1a79a2.js"
+  ]
+}
