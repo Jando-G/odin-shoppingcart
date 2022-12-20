@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/https//http://jandotopia.com/odin-shoppingcart/static/css/main.cfee0bb3.css",
-    "main.js": "/https//http://jandotopia.com/odin-shoppingcart/static/js/main.373fd134.js",
-    "static/media/girl-with-red-hat-cpkB8SumMy4-unsplash.jpg": "/https//http://jandotopia.com/odin-shoppingcart/static/media/girl-with-red-hat-cpkB8SumMy4-unsplash.07579e00830e9c3e315c.jpg",
-    "static/media/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg": "/https//http://jandotopia.com/odin-shoppingcart/static/media/fotis-fotopoulos-DuHKoV44prg-unsplash.41f61d005e89434247f0.jpg",
-    "static/media/sergiu-baica-5hCneY6YeFQ-unsplash.jpg": "/https//http://jandotopia.com/odin-shoppingcart/static/media/sergiu-baica-5hCneY6YeFQ-unsplash.2246d6f1542a52373b51.jpg",
-    "static/media/roberto-nickson-5PQn41LFsQk-unsplash.jpg": "/https//http://jandotopia.com/odin-shoppingcart/static/media/roberto-nickson-5PQn41LFsQk-unsplash.5955e3731fd0538bb5ec.jpg",
-    "static/media/cookieLogo.png": "/https//http://jandotopia.com/odin-shoppingcart/static/media/cookieLogo.9c0ad1447bca0837baa5.png",
-    "static/media/cookie.png": "/https//http://jandotopia.com/odin-shoppingcart/static/media/cookie.6b322d96512fc393225e.png",
-    "static/media/mike-dorner-sf_1ZDA1YFw-unsplash.jpg": "/https//http://jandotopia.com/odin-shoppingcart/static/media/mike-dorner-sf_1ZDA1YFw-unsplash.1644b938a11655c62e2d.jpg",
-    "static/media/orange.png": "/https//http://jandotopia.com/odin-shoppingcart/static/media/orange.cb11f206fb40c6e9135a.png",
-    "static/media/photo-1572860177022-8fda92a90c95.avif": "/https//http://jandotopia.com/odin-shoppingcart/static/media/photo-1572860177022-8fda92a90c95.b6dfcbedf1b9da1dcf01.avif",
-    "index.html": "/https//http://jandotopia.com/odin-shoppingcart/index.html",
-    "main.cfee0bb3.css.map": "/https//http://jandotopia.com/odin-shoppingcart/static/css/main.cfee0bb3.css.map",
-    "main.373fd134.js.map": "/https//http://jandotopia.com/odin-shoppingcart/static/js/main.373fd134.js.map"
+    "main.css": "/odin-shoppingcart/static/css/main.cfee0bb3.css",
+    "main.js": "/odin-shoppingcart/static/js/main.c70cba5c.js",
+    "static/media/girl-with-red-hat-cpkB8SumMy4-unsplash.jpg": "/odin-shoppingcart/static/media/girl-with-red-hat-cpkB8SumMy4-unsplash.07579e00830e9c3e315c.jpg",
+    "static/media/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg": "/odin-shoppingcart/static/media/fotis-fotopoulos-DuHKoV44prg-unsplash.41f61d005e89434247f0.jpg",
+    "static/media/sergiu-baica-5hCneY6YeFQ-unsplash.jpg": "/odin-shoppingcart/static/media/sergiu-baica-5hCneY6YeFQ-unsplash.2246d6f1542a52373b51.jpg",
+    "static/media/roberto-nickson-5PQn41LFsQk-unsplash.jpg": "/odin-shoppingcart/static/media/roberto-nickson-5PQn41LFsQk-unsplash.5955e3731fd0538bb5ec.jpg",
+    "static/media/cookieLogo.png": "/odin-shoppingcart/static/media/cookieLogo.9c0ad1447bca0837baa5.png",
+    "static/media/cookie.png": "/odin-shoppingcart/static/media/cookie.6b322d96512fc393225e.png",
+    "static/media/mike-dorner-sf_1ZDA1YFw-unsplash.jpg": "/odin-shoppingcart/static/media/mike-dorner-sf_1ZDA1YFw-unsplash.1644b938a11655c62e2d.jpg",
+    "static/media/orange.png": "/odin-shoppingcart/static/media/orange.cb11f206fb40c6e9135a.png",
+    "static/media/photo-1572860177022-8fda92a90c95.avif": "/odin-shoppingcart/static/media/photo-1572860177022-8fda92a90c95.b6dfcbedf1b9da1dcf01.avif",
+    "index.html": "/odin-shoppingcart/index.html",
+    "main.cfee0bb3.css.map": "/odin-shoppingcart/static/css/main.cfee0bb3.css.map",
+    "main.c70cba5c.js.map": "/odin-shoppingcart/static/js/main.c70cba5c.js.map"
   },
   "entrypoints": [
     "static/css/main.cfee0bb3.css",
-    "static/js/main.373fd134.js"
+    "static/js/main.c70cba5c.js"
   ]
 }
